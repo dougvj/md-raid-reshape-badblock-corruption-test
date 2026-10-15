@@ -1,0 +1,4 @@
+label	revision	image
+parent	6cb6ab75bdf2f49c0adb0fd6971886b082932eaa	/tmp/md-three-kernels.mAJhL5id/kernels/parent.bzImage
+chen	788e4139463f74b945600237f7186411015d996e	/tmp/md-three-kernels.mAJhL5id/kernels/chen.bzImage
+v3	efcb3cc429308e796efe308d9f9c1f67124ffc61	/tmp/md-three-kernels.mAJhL5id/kernels/v3.bzImage

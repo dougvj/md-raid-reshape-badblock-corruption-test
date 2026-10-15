@@ -1,0 +1,15 @@
+diff --git a/drivers/md/raid5.c b/drivers/md/raid5.c
+index 83f8deefd03b..8fcf6f53e122 100644
+--- a/drivers/md/raid5.c
++++ b/drivers/md/raid5.c
+@@ -3775,6 +3775,10 @@ static void handle_failed_reshape(struct r5conf *conf, struct stripe_head *sh,
+ 	bool was_expanding = test_and_clear_bit(STRIPE_EXPANDING, &sh->state);
+ 	bool was_ready = test_and_clear_bit(STRIPE_EXPAND_READY, &sh->state);
+ 
++	/* Freeze reshaping to prevent data loss */
++	set_bit(MD_RECOVERY_FROZEN, &conf->mddev->recovery);
++	md_sync_error(conf->mddev);
++
+ 	if (was_expanding || was_ready) {
+ 		atomic_dec(&conf->reshape_stripes);
+ 		wake_up(&conf->wait_for_reshape);

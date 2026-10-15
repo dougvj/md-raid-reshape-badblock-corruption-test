@@ -1,0 +1,19 @@
+kernel,case,phase,status,complete,log,sync_action,reshape_position,raid_disks,degraded,grow_exit,phase_exit,original_sectors,before_checked,before_eio,before_readable_mismatch,before_previously_readable_mismatch,correct,read_error,wrong,previously_correct_now_wrong,in_flight,untested,wrong_bytes,previously_correct_now_wrong_bytes,unchecked_bytes,backing_filesystem_flushed
+parent,raid5bad,prepare,incomplete-read-check,True,/tmp/md-three-kernels.mAJhL5id/results/parent-raid5bad-prepare.log,reshape,46080,4 (3),0,0,0,401408,401406,2,0,0,0,0,0,0,512,400896,0,0,205520896,True
+parent,raid5bad,readonly,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/parent-raid5bad-readonly.log,idle,46080,4 (3),0,,0,401408,,,,,397296,0,16,14,8,4088,8192,7168,2097152,False
+parent,raid6bad,prepare,incomplete-read-check,True,/tmp/md-three-kernels.mAJhL5id/results/parent-raid6bad-prepare.log,reshape,46080,5 (4),0,0,0,401408,401406,2,0,0,0,0,0,0,512,400896,0,0,205520896,True
+parent,raid6bad,readonly,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/parent-raid6bad-readonly.log,idle,46080,5 (4),0,,0,401408,,,,,397296,0,16,14,8,4088,8192,7168,2097152,False
+parent,raid5clean,prepare,data-matches,True,/tmp/md-three-kernels.mAJhL5id/results/parent-raid5clean-prepare.log,idle,none,4,0,0,0,401408,401408,0,0,0,401408,0,0,0,0,0,0,0,0,True
+parent,raid5clean,readonly,data-matches,True,/tmp/md-three-kernels.mAJhL5id/results/parent-raid5clean-readonly.log,idle,none,4,0,,0,401408,,,,,401408,0,0,0,0,0,0,0,0,False
+chen,raid5bad,prepare,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/chen-raid5bad-prepare.log,idle,none,4,0,0,0,401408,401406,2,0,0,401358,2,48,46,0,0,24576,23552,0,True
+chen,raid5bad,readonly,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/chen-raid5bad-readonly.log,idle,none,4,0,,0,401408,,,,,401358,2,48,46,0,0,24576,23552,0,False
+chen,raid6bad,prepare,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/chen-raid6bad-prepare.log,idle,none,5,0,0,0,401408,401406,2,0,0,401358,2,48,46,0,0,24576,23552,0,True
+chen,raid6bad,readonly,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/chen-raid6bad-readonly.log,idle,none,5,0,,0,401408,,,,,401358,2,48,46,0,0,24576,23552,0,False
+chen,raid5clean,prepare,data-matches,True,/tmp/md-three-kernels.mAJhL5id/results/chen-raid5clean-prepare.log,idle,none,4,0,0,0,401408,401408,0,0,0,401408,0,0,0,0,0,0,0,0,True
+chen,raid5clean,readonly,data-matches,True,/tmp/md-three-kernels.mAJhL5id/results/chen-raid5clean-readonly.log,idle,none,4,0,,0,401408,,,,,401408,0,0,0,0,0,0,0,0,False
+v3,raid5bad,prepare,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/v3-raid5bad-prepare.log,frozen,46080,4 (3),0,0,0,401408,401406,2,0,0,397296,0,16,14,8,4088,8192,7168,2097152,True
+v3,raid5bad,readonly,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/v3-raid5bad-readonly.log,idle,46080,4 (3),0,,0,401408,,,,,397296,0,16,14,8,4088,8192,7168,2097152,False
+v3,raid6bad,prepare,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/v3-raid6bad-prepare.log,frozen,46080,5 (4),0,0,0,401408,401406,2,0,0,397296,0,16,14,8,4088,8192,7168,2097152,True
+v3,raid6bad,readonly,wrong-data,True,/tmp/md-three-kernels.mAJhL5id/results/v3-raid6bad-readonly.log,idle,46080,5 (4),0,,0,401408,,,,,397296,0,16,14,8,4088,8192,7168,2097152,False
+v3,raid5clean,prepare,data-matches,True,/tmp/md-three-kernels.mAJhL5id/results/v3-raid5clean-prepare.log,idle,none,4,0,0,0,401408,401408,0,0,0,401408,0,0,0,0,0,0,0,0,True
+v3,raid5clean,readonly,data-matches,True,/tmp/md-three-kernels.mAJhL5id/results/v3-raid5clean-readonly.log,idle,none,4,0,,0,401408,,,,,401408,0,0,0,0,0,0,0,0,False

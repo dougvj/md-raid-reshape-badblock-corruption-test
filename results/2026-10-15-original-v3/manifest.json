@@ -1,0 +1,45 @@
+{
+  "kernels": {
+    "parent": {
+      "image": "/tmp/md-three-kernels.mAJhL5id/kernels/parent.bzImage",
+      "sha256": "0b338b79bd1855872d5518a03ab85bc0ad8b3e1aeb21e314ea8ef1cd1ef3eaa1"
+    },
+    "chen": {
+      "image": "/tmp/md-three-kernels.mAJhL5id/kernels/chen.bzImage",
+      "sha256": "a7b9f38baad7cc5254c9c91b9b9153cee058ce1b03377e49096aecc0dab8881e"
+    },
+    "v3": {
+      "image": "/tmp/md-three-kernels.mAJhL5id/kernels/v3.bzImage",
+      "sha256": "2793769f9b2e9d465b7ece9fd4b059036f021c65de0508d80b3e5a2def1ecd6c"
+    }
+  },
+  "fixture": {
+    "pattern-check.c": "98a1f82c168d889b036c65658c2e0e95edfd533739c2d41b1f84b81649ebd14a",
+    "read-probe.c": "345ca53f4364fca29e4ca3e9111d2dde5335d5fdd5ce38314758218c0ab0adf6",
+    "poweroff.c": "fd0645c5ebf95811d2ae19fee90042399211ad819858ffcf6ceb11b95f575315",
+    "init": "e50d9a98487cd8faec32d306a993e59d6fe25be2bea2ae180e19c24fd9a95d29",
+    "build-kernels.sh": "fc137eee8d5c778762de0b3b4a4987f900a7ac2bdf66c30b58449e774edf1515",
+    "README.txt": "fede54091aac4fe6f7584ed85648dd211e560cc153016061375dfd41fd715e0c",
+    "run.sh": "d805f9c450cd598c9490d7f846763479f80760e0ad9a80f481104ea8b854c604",
+    "guest.sh": "fd1fa0233389c62aa4b36f230b3ffa046bb116efe26b3a09e690aa2190203987",
+    "kernel.config": "490a456f2d7160185653324d978c417a771211b601fe93b4bde404bbc4792f11",
+    "run.py": "c2433bc4f5ff19b3a7e15e14bded99a8a599c6a0abf38f5d6ea4ef52891a932e"
+  },
+  "cases": [
+    "raid5bad",
+    "raid6bad",
+    "raid5clean"
+  ],
+  "sector_bytes": 512,
+  "acceleration": "tcg",
+  "uname": [
+    "Linux",
+    "fornax",
+    "7.0.12-arch1-1",
+    "#1 SMP PREEMPT_DYNAMIC Wed, 10 Jun 2026 08:58:02 +0000",
+    "x86_64"
+  ],
+  "qemu": "QEMU emulator version 11.0.1\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers\n",
+  "mdadm": "mdadm - v4.6 - 2026-03-16\n",
+  "initramfs_sha256": "9a58b90e34e17da34ffd5c2849f8af5edb274669bc7bae20c7fd7cc061bdbcaa"
+}

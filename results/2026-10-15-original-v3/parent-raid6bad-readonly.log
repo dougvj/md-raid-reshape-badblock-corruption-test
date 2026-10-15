@@ -1,0 +1,455 @@
+c[?7l[2J[0mSeaBIOS (version Arch Linux 1.17.0-2-2)
+Booting from ROM..c[?7l[2JLinux version 7.2.0-rc5+ (dougvj@fornax) (gcc (GCC) 16.1.1 20260430, GNU ld (GNU Binutils) 2.46.0) #1 SMP PREEMPT Thu Oct 15 09:31:03 MDT 2026
+Command line: console=ttyS0 rdinit=/init panic=-1 disposable_md_repro=1 phase=readonly case=raid6bad
+BIOS-provided physical RAM map:
+BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff]  System RAM
+BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff]  device reserved
+BIOS-e820: [gap 0x00000000000a0000-0x00000000000effff]
+BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff]  device reserved
+BIOS-e820: [mem 0x0000000000100000-0x000000005ffdcfff]  System RAM
+BIOS-e820: [mem 0x000000005ffdd000-0x000000005fffffff]  device reserved
+BIOS-e820: [gap 0x0000000060000000-0x00000000fffbffff]
+BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff]  device reserved
+BIOS-e820: [gap 0x0000000100000000-0x000000fcffffffff]
+BIOS-e820: [mem 0x000000fd00000000-0x000000ffffffffff]  device reserved
+NX (Execute Disable) protection: active
+APIC: Static calls initialized
+last_pfn = 0x5ffdd max_arch_pfn = 0x400000000
+x86/PAT: PAT support disabled because CONFIG_X86_PAT is disabled in the kernel.
+x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+found SMP MP-table at [mem 0x000f66c0-0x000f66cf]
+RAMDISK: [mem 0x5fa22000-0x5ffcffff]
+Intel MultiProcessor Specification v1.4
+MPTABLE: OEM ID: BOCHSCPU
+MPTABLE: Product ID: 0.1         
+MPTABLE: APIC at: 0xFEE00000
+Intel MultiProcessor Specification v1.4
+MPTABLE: OEM ID: BOCHSCPU
+MPTABLE: Product ID: 0.1         
+MPTABLE: APIC at: 0xFEE00000
+Processor #0 (Bootup-CPU)
+IOAPIC[0]: apic_id 0, version 32, address 0xfec00000, GSI 0-23
+Processors: 1
+CPU topo: Max. logical packages:   1
+CPU topo: Max. logical nodes:      1
+CPU topo: Num. nodes per package:  1
+CPU topo: Max. logical dies:       1
+CPU topo: Max. dies per package:   1
+CPU topo: Max. threads per core:   1
+CPU topo: Num. cores per package:     1
+CPU topo: Num. threads per package:   1
+CPU topo: Allowing 1 present CPUs plus 0 hotplug CPUs
+[gap 0x60000000-0xfffbffff] available for PCI devices
+clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Zone ranges:
+  DMA32    [mem 0x0000000000001000-0x000000005ffdcfff]
+  Normal   empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000000001000-0x000000000009efff]
+  node   0: [mem 0x0000000000100000-0x000000005ffdcfff]
+Initmem setup node 0 [mem 0x0000000000001000-0x000000005ffdcfff]
+On node 0, zone DMA32: 1 pages in unavailable ranges
+On node 0, zone DMA32: 97 pages in unavailable ranges
+On node 0, zone DMA32: 35 pages in unavailable ranges
+setup_percpu: NR_CPUS:2 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+percpu: Embedded 36 pages/cpu s117184 r0 d30272 u2097152
+Kernel command line: console=ttyS0 rdinit=/init panic=-1 disposable_md_repro=1 phase=readonly case=raid6bad
+Unknown kernel command line parameters "disposable_md_repro=1 phase=readonly case=raid6bad", will be passed to user space.
+printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Built 1 zonelists, mobility grouping on.  Total pages: 393083
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+SLUB: HWalign=64, Order=0-1, MinObjects=0, CPUs=1, Nodes=1
+rcu: Preemptible hierarchical RCU implementation.
+rcu: 	RCU restricting CPUs from NR_CPUS=2 to nr_cpu_ids=1.
+rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS: 4352, nr_irqs: 48, preallocated irqs: 16
+rcu: srcu_init: Setting srcu_struct sizes based on contention.
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Console: colour VGA+ 80x25
+printk: legacy console [ttyS0] enabled
+APIC: Switch to symmetric I/O mode setup
+..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+tsc: Unable to calibrate against PIT
+tsc: No reference (HPET/PMTIMER) available
+tsc: Marking TSC unstable due to could not calculate TSC khz
+Calibrating delay loop... 672.76 BogoMIPS (lpj=1345536)
+Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+mitigations: Enabled attack vectors: SMT mitigations: off
+Spectre V2 : Vulnerable
+Spectre V1 : Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+x86/fpu: x87 FPU will use FXSAVE
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+VFS: Finished mounting rootfs on nullfs
+smpboot: CPU0: AMD QEMU Virtual CPU version 2.5+ (family: 0xf, model: 0x6b, stepping: 0x1)
+Performance Events: PMU not available due to virtualization, using software events only.
+signal: max sigframe size: 1040
+rcu: Hierarchical SRCU implementation.
+rcu: 	Max phase no-delay instances is 1000.
+smp: Bringing up secondary CPUs ...
+smp: Brought up 1 node, 1 CPU
+smpboot: Total of 1 processors activated (672.76 BogoMIPS)
+Memory: 1526236K/1572332K available (5602K kernel code, 844K rwdata, 956K rodata, 796K init, 240K bss, 44476K reserved, 0K cma-reserved)
+devtmpfs: initialized
+posixtimers hash table entries: 512 (order: 1, 8192 bytes, linear)
+futex hash table entries: 256 (16384 bytes on 1 NUMA nodes, total 16 KiB, linear).
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Freeing SMP alternatives memory: 16K
+PCI: Using configuration type 1 for base access
+raid6: using intx1 recovery algorithm
+raid6: sse2x1   gen()  1543 MB/s
+raid6: sse2x2   gen()  1826 MB/s
+raid6: sse2x4   gen()  1849 MB/s
+raid6: using algorithm sse2x4 gen() 1849 MB/s
+raid6: .... xor() 1105 MB/s, rmw enabled
+PCI: Probing PCI hardware
+PCI host bridge to bus 0000:00
+pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+pci_bus 0000:00: root bus resource [mem 0x00000000-0xffffffffff]
+pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+pci 0000:00:00.0: [8086:1237] type 00 class 0x060000 conventional PCI endpoint
+pci 0000:00:01.0: [8086:7000] type 00 class 0x060100 conventional PCI endpoint
+pci 0000:00:01.1: [8086:7010] type 00 class 0x010180 conventional PCI endpoint
+pci 0000:00:01.1: BAR 4 [io  0xc080-0xc08f]
+pci 0000:00:01.1: BAR 0 [io  0x01f0-0x01f7]: legacy IDE quirk
+pci 0000:00:01.1: BAR 1 [io  0x03f6]: legacy IDE quirk
+pci 0000:00:01.1: BAR 2 [io  0x0170-0x0177]: legacy IDE quirk
+pci 0000:00:01.1: BAR 3 [io  0x0376]: legacy IDE quirk
+pci 0000:00:01.3: [8086:7113] type 00 class 0x068000 conventional PCI endpoint
+pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+pci 0000:00:02.0: [1234:1111] type 00 class 0x030000 conventional PCI endpoint
+pci 0000:00:02.0: BAR 0 [mem 0xfd000000-0xfdffffff pref]
+pci 0000:00:02.0: BAR 2 [mem 0xfebf0000-0xfebf0fff]
+pci 0000:00:02.0: ROM [mem 0xfebe0000-0xfebeffff pref]
+pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+pci 0000:00:03.0: [1af4:1001] type 00 class 0x010000 conventional PCI endpoint
+pci 0000:00:03.0: BAR 0 [io  0xc000-0xc07f]
+pci 0000:00:03.0: BAR 1 [mem 0xfebf1000-0xfebf1fff]
+pci 0000:00:03.0: BAR 4 [mem 0xfe000000-0xfe003fff 64bit pref]
+pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 00
+pci 0000:00:01.0: PIIX/ICH IRQ router [8086:7000]
+e820: register RAM buffer resource [mem 0x0009fc00-0x0009ffff]
+e820: register RAM buffer resource [mem 0x5ffdd000-0x5fffffff]
+pci 0000:00:02.0: vgaarb: setting as boot VGA device
+pci 0000:00:02.0: vgaarb: bridge control possible
+pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+vgaarb: loaded
+clocksource: Switched to clocksource refined-jiffies
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+pci_bus 0000:00: resource 5 [mem 0x00000000-0xffffffffff]
+pci 0000:00:01.0: PIIX3: Enabling Passive Release
+pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+PCI: CLS 0 bytes, default 64
+Unpacking initramfs...
+platform rtc_cmos: registered fallback platform RTC device
+workingset: timestamp_bits=62 (anon: 57) max_order=19 bucket_order=0 (anon: 0)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+xor: measuring software checksum speed
+   prefetch64-sse  :   820 MB/sec
+   sse             :  1274 MB/sec
+xor: using function: sse (1274 MB/sec)
+virtio-pci 0000:00:03.0: PCI->APIC IRQ transform: INT A -> IRQ 11
+Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+serial8250: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+loop: module loaded
+virtio_blk virtio0: 1/0/0 default/read/poll queues
+virtio_blk virtio0: [vda] 3145728 512-byte logical blocks (1.61 GB/1.50 GiB)
+serio: i8042 KBD port at 0x60,0x64 irq 1
+serio: i8042 AUX port at 0x60,0x64 irq 12
+IPI shorthand broadcast: enabled
+input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+Freeing initrd memory: 5816K
+Freeing unused kernel image (initmem) memory: 796K
+Write protecting the kernel read-only data: 8192k
+Freeing unused kernel image (text/rodata gap) memory: 540K
+Freeing unused kernel image (rodata/data gap) memory: 1092K
+Run /init as init process
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input2
+EXT4-fs (vda): recovery complete
+EXT4-fs (vda): mounted filesystem 1b685953-b73b-4558-8622-e02c46a2ad66 r/w with ordered data mode. Quota mode: disabled.
+VALIDATION_START
+Linux (none) 7.2.0-rc5+ #1 SMP PREEMPT Thu Oct 15 09:31:03 MDT 2026 x86_64 GNU/Linux
+mdadm - v4.6 - 2026-03-16
+PHASE=readonly CASE=raid6bad
+GUEST_HEARTBEAT
+loop0: detected capacity change from 0 to 204800
+loop1: detected capacity change from 0 to 204800
+loop2: detected capacity change from 0 to 204800
+loop3: detected capacity change from 0 to 204800
+loop4: detected capacity change from 0 to 204800
+md/raid:md127: device loop0 operational as raid disk 0
+md/raid:md127: device loop4 operational as raid disk 4
+md/raid:md127: device loop3 operational as raid disk 3
+md/raid:md127: device loop2 operational as raid disk 2
+md/raid:md127: device loop1 operational as raid disk 1
+md/raid:md127: force stripe size 512 for reshape
+md/raid:md127: raid level 6 active with 5 out of 5 devices, algorithm 2
+md127: detected capacity change from 0 to 401408
+md_update_sb: can't update sb for read-only array md127
+mdadm: /dev/md127 has been started with 5 drives.
+ORIGINAL_SECTORS=401408
+CHECK_STATE_BEFORE
+STATE_sync_action=idle
+STATE_reshape_position=46080
+STATE_raid_disks=5 (4)
+STATE_degraded=0
+Personalities : [raid4] [raid5] [raid6] 
+md127 : active (read-only) raid6 loop0[0] loop4[4] loop3[3] loop2[2] loop1[1]
+      200704 blocks super 1.2 level 6, 512k chunk, algorithm 2 [5/5] [UUUUU]
+      
+unused devices: <none>
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+GUEST_HEARTBEAT
+dm-raid456: io across reshape position while reshape can't make progress
+make_stripe_request: 165145 callbacks suppressed
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+GUEST_HEARTBEAT
+dm-raid456: io across reshape position while reshape can't make progress
+make_stripe_request: 357897 callbacks suppressed
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+GUEST_HEARTBEAT
+dm-raid456: io across reshape position while reshape can't make progress
+make_stripe_request: 443534 callbacks suppressed
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+GUEST_HEARTBEAT
+READ_MISMATCH sector=31264 pre_readable=0
+READ_MISMATCH sector=31265 pre_readable=1
+READ_MISMATCH sector=31266 pre_readable=1
+READ_MISMATCH sector=31267 pre_readable=1
+READ_MISMATCH sector=31268 pre_readable=1
+READ_MISMATCH sector=31269 pre_readable=1
+READ_MISMATCH sector=31270 pre_readable=1
+READ_MISMATCH sector=31271 pre_readable=1
+READ_MISMATCH sector=32288 pre_readable=0
+READ_MISMATCH sector=32289 pre_readable=1
+READ_MISMATCH sector=32290 pre_readable=1
+READ_MISMATCH sector=32291 pre_readable=1
+READ_MISMATCH sector=32292 pre_readable=1
+READ_MISMATCH sector=32293 pre_readable=1
+READ_MISMATCH sector=32294 pre_readable=1
+READ_MISMATCH sector=32295 pre_readable=1
+READ_SUMMARY correct=397296 read_error=0 wrong=16 previously_correct_now_wrong=14 in_flight=8 untested=4088
+CHECK_STATE_AFTER
+STATE_sync_action=idle
+STATE_reshape_position=46080
+STATE_raid_disks=5 (4)
+STATE_degraded=0
+Personalities : [raid4] [raid5] [raid6] 
+md127 : active (read-only) raid6 loop0[0] loop4[4] loop3[3] loop2[2] loop1[1]
+      200704 blocks super 1.2 level 6, 512k chunk, algorithm 2 [5/5] [UUUUU]
+      
+unused devices: <none>
+MEMBER=0
+/dev/loop0:
+          Magic : a92b4efc
+        Version : 1.2
+    Feature Map : 0x4c
+     Array UUID : 6069b842:4c877072:dfd422cd:0f1b83ee
+           Name : (none):127  (local to host (none))
+  Creation Time : Thu Oct 15 15:34:42 2026
+     Raid Level : raid6
+   Raid Devices : 5
+
+ Avail Dev Size : 200704 sectors (98.00 MiB 102.76 MB)
+     Array Size : 301056 KiB (294.00 MiB 308.28 MB)
+    Data Offset : 4096 sectors
+     New Offset : 1024 sectors
+   Super Offset : 8 sectors
+          State : clean
+    Device UUID : 7868010b:bf1443b9:2de02bd3:f79ed245
+
+  Reshape pos'n : 23040 (22.50 MiB 23.59 MB)
+  Delta Devices : 1 (4->5)
+
+    Update Time : Thu Oct 15 15:34:54 2026
+  Bad Block Log : 512 entries available at offset 16 sectors - bad blocks present.
+       Checksum : 6c9ac303 - correct
+         Events : 26
+
+         Layout : left-symmetric
+     Chunk Size : 512K
+
+   Device Role : Active device 0
+   Array State : AAAAA ('A' == active, '.' == missing, 'R' == replacing)
+MEMBER=1
+/dev/loop1:
+          Magic : a92b4efc
+        Version : 1.2
+    Feature Map : 0x4c
+     Array UUID : 6069b842:4c877072:dfd422cd:0f1b83ee
+           Name : (none):127  (local to host (none))
+  Creation Time : Thu Oct 15 15:34:42 2026
+     Raid Level : raid6
+   Raid Devices : 5
+
+ Avail Dev Size : 200704 sectors (98.00 MiB 102.76 MB)
+     Array Size : 301056 KiB (294.00 MiB 308.28 MB)
+    Data Offset : 4096 sectors
+     New Offset : 1024 sectors
+   Super Offset : 8 sectors
+          State : clean
+    Device UUID : dd32a138:e79b5070:58229745:c32d0f26
+
+  Reshape pos'n : 23040 (22.50 MiB 23.59 MB)
+  Delta Devices : 1 (4->5)
+
+    Update Time : Thu Oct 15 15:34:54 2026
+  Bad Block Log : 512 entries available at offset 16 sectors - bad blocks present.
+       Checksum : a3efe587 - correct
+         Events : 26
+
+         Layout : left-symmetric
+     Chunk Size : 512K
+
+   Device Role : Active device 1
+   Array State : AAAAA ('A' == active, '.' == missing, 'R' == replacing)
+MEMBER=2
+/dev/loop2:
+          Magic : a92b4efc
+        Version : 1.2
+    Feature Map : 0x4c
+     Array UUID : 6069b842:4c877072:dfd422cd:0f1b83ee
+           Name : (none):127  (local to host (none))
+  Creation Time : Thu Oct 15 15:34:42 2026
+     Raid Level : raid6
+   Raid Devices : 5
+
+ Avail Dev Size : 200704 sectors (98.00 MiB 102.76 MB)
+     Array Size : 301056 KiB (294.00 MiB 308.28 MB)
+    Data Offset : 4096 sectors
+     New Offset : 1024 sectors
+   Super Offset : 8 sectors
+          State : clean
+    Device UUID : 9a12698d:1e0c4aa6:7e3a841c:52a3c0d7
+
+  Reshape pos'n : 23040 (22.50 MiB 23.59 MB)
+  Delta Devices : 1 (4->5)
+
+    Update Time : Thu Oct 15 15:34:54 2026
+  Bad Block Log : 512 entries available at offset 16 sectors - bad blocks present.
+       Checksum : b74fc332 - correct
+         Events : 26
+
+         Layout : left-symmetric
+     Chunk Size : 512K
+
+   Device Role : Active device 2
+   Array State : AAAAA ('A' == active, '.' == missing, 'R' == replacing)
+MEMBER=3
+/dev/loop3:
+          Magic : a92b4efc
+        Version : 1.2
+    Feature Map : 0x4c
+     Array UUID : 6069b842:4c877072:dfd422cd:0f1b83ee
+           Name : (none):127  (local to host (none))
+  Creation Time : Thu Oct 15 15:34:42 2026
+     Raid Level : raid6
+   Raid Devices : 5
+
+ Avail Dev Size : 200704 sectors (98.00 MiB 102.76 MB)
+     Array Size : 301056 KiB (294.00 MiB 308.28 MB)
+    Data Offset : 4096 sectors
+     New Offset : 1024 sectors
+   Super Offset : 8 sectors
+          State : clean
+    Device UUID : 2c059c47:0694898b:da327d02:d0a4cabb
+
+  Reshape pos'n : 23040 (22.50 MiB 23.59 MB)
+  Delta Devices : 1 (4->5)
+
+    Update Time : Thu Oct 15 15:34:54 2026
+  Bad Block Log : 512 entries available at offset 16 sectors - bad blocks present.
+       Checksum : 20c53787 - correct
+         Events : 26
+
+         Layout : left-symmetric
+     Chunk Size : 512K
+
+   Device Role : Active device 3
+   Array State : AAAAA ('A' == active, '.' == missing, 'R' == replacing)
+MEMBER=4
+/dev/loop4:
+          Magic : a92b4efc
+        Version : 1.2
+    Feature Map : 0x44
+     Array UUID : 6069b842:4c877072:dfd422cd:0f1b83ee
+           Name : (none):127  (local to host (none))
+  Creation Time : Thu Oct 15 15:34:42 2026
+     Raid Level : raid6
+   Raid Devices : 5
+
+ Avail Dev Size : 200704 sectors (98.00 MiB 102.76 MB)
+     Array Size : 301056 KiB (294.00 MiB 308.28 MB)
+    Data Offset : 4096 sectors
+     New Offset : 1024 sectors
+   Super Offset : 8 sectors
+          State : clean
+    Device UUID : c109f263:6c36312c:eb6b5eba:b5e12371
+
+  Reshape pos'n : 23040 (22.50 MiB 23.59 MB)
+  Delta Devices : 1 (4->5)
+
+    Update Time : Thu Oct 15 15:34:54 2026
+  Bad Block Log : 512 entries available at offset 16 sectors
+       Checksum : 4afd5471 - correct
+         Events : 26
+
+         Layout : left-symmetric
+     Chunk Size : 512K
+
+   Device Role : Active device 4
+   Array State : AAAAA ('A' == active, '.' == missing, 'R' == replacing)
+dm-raid456: io across reshape position while reshape can't make progress
+make_stripe_request: 429019 callbacks suppressed
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+dm-raid456: io across reshape position while reshape can't make progress
+PHASE_EXIT=0
+VALIDATION_END

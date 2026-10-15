@@ -1,0 +1,2 @@
+# Preserve recorded evidence byte-for-byte, including serial CRLF output.
+results/** -text

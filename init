@@ -1,0 +1,39 @@
+#!/bin/bash
+export PATH=/bin:/sbin
+die() { echo "FIXTURE_ERROR=$*"; poweroff; while :; do sleep 1; done; }
+mount -t proc proc /proc || die proc
+mount -t sysfs sysfs /sys || die sysfs
+mount -t devtmpfs devtmpfs /dev || die devtmpfs
+grep -q 'disposable_md_repro=1' /proc/cmdline || die command_line
+mkdir -p /work /run/mdadm /var/run/mdadm
+mount -t ext4 /dev/vda /work || die fixture_disk
+phase=prepare; case_name=raid5bad
+for arg in $(cat /proc/cmdline); do
+ case "$arg" in phase=*) phase=${arg#phase=};; case=*) case_name=${arg#case=};; esac
+done
+if [[ $phase == prepare ]]; then
+ [[ ! -f /work/original-sectors ]] || die disk_already_used
+ echo fixture > /work/.fixture-disk
+else
+ [[ -f /work/.fixture-disk && -f /work/original-sectors ]] || die missing_saved_array
+fi
+echo VALIDATION_START
+uname -a
+mdadm --version
+echo "PHASE=$phase CASE=$case_name"
+timeout -k 2 180 bash /guest.sh "$phase" "$case_name" </dev/null &
+test_pid=$!
+while kill -0 "$test_pid" 2>/dev/null; do
+ echo GUEST_HEARTBEAT
+ sleep 5
+done
+wait "$test_pid"
+test_rc=$?
+echo "PHASE_EXIT=$test_rc"
+if [[ $phase == prepare ]]; then
+ sync -f /work || die backing_filesystem_flush
+ echo PREPARE_FLUSHED
+fi
+echo VALIDATION_END
+poweroff
+while :; do sleep 1; done

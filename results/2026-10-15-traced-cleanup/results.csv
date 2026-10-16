@@ -1,0 +1,7 @@
+kernel,case,phase,status,complete,log,sync_action,reshape_position,raid_disks,degraded,grow_exit,phase_exit,original_sectors,before_checked,before_eio,before_readable_mismatch,before_previously_readable_mismatch,correct,read_error,wrong,previously_correct_now_wrong,in_flight,untested,wrong_bytes,previously_correct_now_wrong_bytes,unchecked_bytes,backing_filesystem_flushed
+chen,raid5bad,prepare,wrong-data,True,/tmp/md-reshape-trace-run.BhXmV1MZ/results/chen-raid5bad-prepare.log,idle,none,4,0,0,0,401408,401406,2,0,0,401358,2,48,46,0,0,24576,23552,0,True
+chen,raid5bad,readonly,wrong-data,True,/tmp/md-reshape-trace-run.BhXmV1MZ/results/chen-raid5bad-readonly.log,idle,none,4,0,,0,401408,,,,,401358,2,48,46,0,0,24576,23552,0,False
+chen-trace,raid5bad,prepare,wrong-data,True,/tmp/md-reshape-trace-run.BhXmV1MZ/results/chen-trace-raid5bad-prepare.log,idle,none,4,0,0,0,401408,401406,2,0,0,401358,2,48,46,0,0,24576,23552,0,True
+chen-trace,raid5bad,readonly,wrong-data,True,/tmp/md-reshape-trace-run.BhXmV1MZ/results/chen-trace-raid5bad-readonly.log,idle,none,4,0,,0,401408,,,,,401358,2,48,46,0,0,24576,23552,0,False
+interrupted-trace,raid5bad,prepare,incomplete-read-check,True,/tmp/md-reshape-trace-run.BhXmV1MZ/results/interrupted-trace-raid5bad-prepare.log,frozen,24576,4 (3),0,0,0,401408,401406,2,0,0,388352,0,0,0,24,13032,0,0,6684672,True
+interrupted-trace,raid5bad,readonly,reshape-incomplete,True,/tmp/md-reshape-trace-run.BhXmV1MZ/results/interrupted-trace-raid5bad-readonly.log,idle,24576,4 (3),0,,0,401408,,,,,401392,16,0,0,0,0,0,0,0,False

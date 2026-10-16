@@ -64,3 +64,5 @@ chunks 512 KiB, and injection is `20000 1` on every original member.
 All MD operations run inside guests; no sudo is needed. Builds require
 GCC; execution requires Python 3.11+, QEMU, mdadm, cpio, e2fsprogs and
 standard Linux utilities. See `run.py --help` for supplied-image options.
+
+For source/destination tracing and physical fingerprint scans, see [TRACING.md](TRACING.md).

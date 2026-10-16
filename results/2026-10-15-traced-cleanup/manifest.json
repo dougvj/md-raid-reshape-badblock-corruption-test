@@ -1,0 +1,55 @@
+{
+  "kernels": {
+    "chen": {
+      "image": "/tmp/md-three-kernels.mAJhL5id/kernels/chen.bzImage",
+      "sha256": "a7b9f38baad7cc5254c9c91b9b9153cee058ce1b03377e49096aecc0dab8881e"
+    },
+    "chen-trace": {
+      "image": "/tmp/md-reshape-trace-run.BhXmV1MZ/chen-trace.bzImage",
+      "sha256": "c4fd6e8a1d0938f9f4a3b66ebf3a775c065011709130606fb2dfb6fb7cc39800"
+    },
+    "interrupted-trace": {
+      "image": "/tmp/md-reshape-trace-run.BhXmV1MZ/interrupted-trace.bzImage",
+      "sha256": "98cd15c786eb76bb1a5bee7f19fce8cbf6c213e2042f0d08d5d707114532aec8"
+    }
+  },
+  "fixture": {
+    "trace.sh": "00b257e9aea16a582b48f2e2ffe91d44805dbc694414710796dfe3880fd36934",
+    "pattern-check.c": "98a1f82c168d889b036c65658c2e0e95edfd533739c2d41b1f84b81649ebd14a",
+    "read-probe.c": "46ac1b7b87066807bd59301ec74813059cde3c354eeab48f2448b5838def31b8",
+    "copy-handler.py": "cecf7bc375c100b228cc39f843f22c43fe572cc3e07ea3d833cbf1119b7940ec",
+    "poweroff.c": "fd0645c5ebf95811d2ae19fee90042399211ad819858ffcf6ceb11b95f575315",
+    "init": "e50d9a98487cd8faec32d306a993e59d6fe25be2bea2ae180e19c24fd9a95d29",
+    "README.md": "9f11b23eb9b907d5183dfdeb44e095bf9a0522ffefa1218cae23e655e8a76dfa",
+    "build-kernels.sh": "387f46e8dba3f207626bec5e8fd5d88b3c0595563123cd769950887daf3690fc",
+    "README.txt": "09377c5f41e627b25f1c666dd52048e3485aa3dac7fe50c5b6ebbd3e587286a2",
+    "instrument-reshape.py": "4fbfe7d7b12611a4dbee8d1f77db8c35198b58e19329944b9ba769e6e9ef10d4",
+    "analyze-trace.py": "0324ca26c0056931d32efb7da5b2b74c0c573f5430a0e3753824b099d2f88578",
+    "run.sh": "f49e80b44f21111446916a9edaebbd7391dc7b3b16868d7118bb304ab67d3f86",
+    "baseline-path.txt": "f7a0890e99e1a3cda8c4ad79c2ac43671fcf8dbbce533588a2047b0ca97fd37f",
+    "guest.sh": "fd1fa0233389c62aa4b36f230b3ffa046bb116efe26b3a09e690aa2190203987",
+    ".gitattributes": "af61a5a52973d1a42d79a30df8adb0b3094c69408fd6b02cb03fcba0df19ecfa",
+    "kernel.config": "490a456f2d7160185653324d978c417a771211b601fe93b4bde404bbc4792f11",
+    "run.py": "c2433bc4f5ff19b3a7e15e14bded99a8a599c6a0abf38f5d6ea4ef52891a932e",
+    "trace-cache-path.txt": "faf591a3d4e03b10271cb94838dd0bd95db9ae949a1faf722a78693d7cede9c1",
+    "TRACING.md": "576304b3900265865581f2d11608a3a15d79800805fd6add0508fa9cb22fc329",
+    "fingerprints.py": "2ac4275ac7294a4a76e69b3d9cabcc4c73435208870fa2ca2fffafc8fe8cd1b5",
+    ".gitignore": "9a68634aef976d418563162fbfbf86b766abd5268f2358376de811f20b1d3851",
+    "linux-path.sh": "c7487d1546a9a570bc049d4c49fcf846a3be7b27be0d55c423b13e86bd4a5f4e"
+  },
+  "cases": [
+    "raid5bad"
+  ],
+  "sector_bytes": 512,
+  "acceleration": "tcg",
+  "uname": [
+    "Linux",
+    "fornax",
+    "7.0.12-arch1-1",
+    "#1 SMP PREEMPT_DYNAMIC Wed, 10 Jun 2026 08:58:02 +0000",
+    "x86_64"
+  ],
+  "qemu": "QEMU emulator version 11.0.1\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers\n",
+  "mdadm": "mdadm - v4.6 - 2026-03-16\n",
+  "initramfs_sha256": "864f8f3eafad3145cde4f2cabc767919009b020ea9c22f0f1ad589bb4775f51e"
+}

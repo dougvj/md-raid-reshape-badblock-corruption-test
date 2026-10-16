@@ -1,0 +1,631 @@
+{
+  "observations": [
+    {
+      "logical": 32288,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32289,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32290,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32291,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32292,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32293,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32294,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 32295,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 33312,
+      "matches_original_sectors": [
+        15904
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33313,
+      "matches_original_sectors": [
+        15905
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33314,
+      "matches_original_sectors": [
+        15906
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33315,
+      "matches_original_sectors": [
+        15907
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33316,
+      "matches_original_sectors": [
+        15908
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33317,
+      "matches_original_sectors": [
+        15909
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33318,
+      "matches_original_sectors": [
+        15910
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 33319,
+      "matches_original_sectors": [
+        15911
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46624,
+      "matches_original_sectors": [
+        26144
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46625,
+      "matches_original_sectors": [
+        26145
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46626,
+      "matches_original_sectors": [
+        26146
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46627,
+      "matches_original_sectors": [
+        26147
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46628,
+      "matches_original_sectors": [
+        26148
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46629,
+      "matches_original_sectors": [
+        26149
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46630,
+      "matches_original_sectors": [
+        26150
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 46631,
+      "matches_original_sectors": [
+        26151
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 47648,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47649,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47650,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47651,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47652,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47653,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47654,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 47655,
+      "matches_original_sectors": [],
+      "all_zero": false
+    },
+    {
+      "logical": 48672,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48673,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48674,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48675,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48676,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48677,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48678,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 48679,
+      "matches_original_sectors": [],
+      "all_zero": true
+    },
+    {
+      "logical": 31264,
+      "matches_original_sectors": [
+        14880
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31265,
+      "matches_original_sectors": [
+        14881
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31266,
+      "matches_original_sectors": [
+        14882
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31267,
+      "matches_original_sectors": [
+        14883
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31268,
+      "matches_original_sectors": [
+        14884
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31269,
+      "matches_original_sectors": [
+        14885
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31270,
+      "matches_original_sectors": [
+        14886
+      ],
+      "all_zero": false
+    },
+    {
+      "logical": 31271,
+      "matches_original_sectors": [
+        14887
+      ],
+      "all_zero": false
+    }
+  ],
+  "member_locations": [
+    {
+      "member": "rd0.img",
+      "physical_sector": 11808,
+      "original_sectors": [
+        15904
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11809,
+      "original_sectors": [
+        15905
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11810,
+      "original_sectors": [
+        15906
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11811,
+      "original_sectors": [
+        15907
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11812,
+      "original_sectors": [
+        15908
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11813,
+      "original_sectors": [
+        15909
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11814,
+      "original_sectors": [
+        15910
+      ]
+    },
+    {
+      "member": "rd0.img",
+      "physical_sector": 11815,
+      "original_sectors": [
+        15911
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9760,
+      "original_sectors": [
+        26144
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9761,
+      "original_sectors": [
+        26145
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9762,
+      "original_sectors": [
+        26146
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9763,
+      "original_sectors": [
+        26147
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9764,
+      "original_sectors": [
+        26148
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9765,
+      "original_sectors": [
+        26149
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9766,
+      "original_sectors": [
+        26150
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 9767,
+      "original_sectors": [
+        26151
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16928,
+      "original_sectors": [
+        26144
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16929,
+      "original_sectors": [
+        26145
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16930,
+      "original_sectors": [
+        26146
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16931,
+      "original_sectors": [
+        26147
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16932,
+      "original_sectors": [
+        26148
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16933,
+      "original_sectors": [
+        26149
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16934,
+      "original_sectors": [
+        26150
+      ]
+    },
+    {
+      "member": "rd1.img",
+      "physical_sector": 16935,
+      "original_sectors": [
+        26151
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5664,
+      "original_sectors": [
+        14880
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5665,
+      "original_sectors": [
+        14881
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5666,
+      "original_sectors": [
+        14882
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5667,
+      "original_sectors": [
+        14883
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5668,
+      "original_sectors": [
+        14884
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5669,
+      "original_sectors": [
+        14885
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5670,
+      "original_sectors": [
+        14886
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 5671,
+      "original_sectors": [
+        14887
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11808,
+      "original_sectors": [
+        14880
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11809,
+      "original_sectors": [
+        14881
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11810,
+      "original_sectors": [
+        14882
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11811,
+      "original_sectors": [
+        14883
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11812,
+      "original_sectors": [
+        14884
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11813,
+      "original_sectors": [
+        14885
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11814,
+      "original_sectors": [
+        14886
+      ]
+    },
+    {
+      "member": "rd2.img",
+      "physical_sector": 11815,
+      "original_sectors": [
+        14887
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6688,
+      "original_sectors": [
+        15904
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6689,
+      "original_sectors": [
+        15905
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6690,
+      "original_sectors": [
+        15906
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6691,
+      "original_sectors": [
+        15907
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6692,
+      "original_sectors": [
+        15908
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6693,
+      "original_sectors": [
+        15909
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6694,
+      "original_sectors": [
+        15910
+      ]
+    },
+    {
+      "member": "rd3.img",
+      "physical_sector": 6695,
+      "original_sectors": [
+        15911
+      ]
+    }
+  ],
+  "note": "Physical sectors include member metadata/data offsets. No match does not establish irrecoverability."
+}

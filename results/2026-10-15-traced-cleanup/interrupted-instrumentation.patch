@@ -1,0 +1,69 @@
+diff --git a/drivers/md/raid5.c b/drivers/md/raid5.c
+index 83f8deefd03b..e17612e88f53 100644
+--- a/drivers/md/raid5.c
++++ b/drivers/md/raid5.c
+@@ -3774,6 +3774,12 @@ static void handle_failed_reshape(struct r5conf *conf, struct stripe_head *sh,
+ 	int i;
+ 	bool was_expanding = test_and_clear_bit(STRIPE_EXPANDING, &sh->state);
+ 	bool was_ready = test_and_clear_bit(STRIPE_EXPAND_READY, &sh->state);
++	if (sh->sector >= 0ULL && sh->sector <= 40000ULL)
++		pr_info("MDTRACE event=failed sector=%llu expanding=%d ready=%d source=%d failed=%d\n", (unsigned long long)(sh->sector), was_expanding, was_ready, test_bit(STRIPE_EXPAND_SOURCE, &sh->state), s->failed);
++
++
++	set_bit(MD_RECOVERY_FROZEN, &conf->mddev->recovery);
++	md_sync_error(conf->mddev);
+ 
+ 	if (was_expanding || was_ready) {
+ 		atomic_dec(&conf->reshape_stripes);
+@@ -3804,6 +3810,9 @@ static void handle_failed_reshape(struct r5conf *conf, struct stripe_head *sh,
+ 			if (!sh2)
+ 				continue;
+ 
++
++			if (sh->sector >= 0ULL && sh->sector <= 40000ULL)
++				pr_info("MDTRACE event=cancel_destination sector=%llu destination=%llu logical=%llu disk=%d active=%d\n", (unsigned long long)(sh->sector), (unsigned long long)sec, (unsigned long long)bn, dd_idx, test_bit(STRIPE_EXPANDING, &sh2->state));
+ 			if (test_and_clear_bit(STRIPE_EXPANDING, &sh2->state)) {
+ 				atomic_dec(&conf->reshape_stripes);
+ 				wake_up(&conf->wait_for_reshape);
+@@ -4661,6 +4670,9 @@ static void handle_stripe_expansion(struct r5conf *conf, struct stripe_head *sh)
+ 
+ 			/* place all the copies on one channel */
+ 			init_async_submit(&submit, 0, tx, NULL, NULL, NULL);
++
++			if (sh->sector >= 0ULL && sh->sector <= 40000ULL)
++				pr_info("MDTRACE event=copy_submit sector=%llu destination=%llu logical=%llu source_disk=%d destination_disk=%d\n", (unsigned long long)(sh->sector), (unsigned long long)s, (unsigned long long)bn, i, dd_idx);
+ 			tx = async_memcpy(sh2->dev[dd_idx].page,
+ 					  sh->dev[i].page, sh2->dev[dd_idx].offset,
+ 					  sh->dev[i].offset, RAID5_STRIPE_SIZE(conf),
+@@ -5307,6 +5319,9 @@ static void handle_stripe(struct stripe_head *sh)
+ 		if (sh_src)
+ 			raid5_release_stripe(sh_src);
+ 
++
++		if (sh->sector >= 0ULL && sh->sector <= 40000ULL)
++			pr_info("MDTRACE event=destination_write_submit sector=%llu\n", (unsigned long long)(sh->sector));
+ 		sh->reconstruct_state = reconstruct_state_idle;
+ 		clear_bit(STRIPE_EXPANDING, &sh->state);
+ 		for (i = conf->raid_disks; i--; ) {
+@@ -6494,6 +6509,10 @@ static sector_t reshape_request(struct mddev *mddev, sector_t sector_nr, int *sk
+ 			   || test_bit(MD_RECOVERY_INTR, &mddev->recovery));
+ 		if (atomic_read(&conf->reshape_stripes) != 0)
+ 			return 0;
++		pr_info("MDTRACE event=checkpoint progress=%llu safe=%llu intr=%d\n",
++			(unsigned long long)conf->reshape_progress,
++			(unsigned long long)conf->reshape_safe,
++			test_bit(MD_RECOVERY_INTR, &mddev->recovery));
+ 		mddev->reshape_position = conf->reshape_progress;
+ 		mddev->curr_resync_completed = sector_nr;
+ 		if (!mddev->reshape_backwards)
+@@ -6603,6 +6622,10 @@ static sector_t reshape_request(struct mddev *mddev, sector_t sector_nr, int *sk
+ 			   || test_bit(MD_RECOVERY_INTR, &mddev->recovery));
+ 		if (atomic_read(&conf->reshape_stripes) != 0)
+ 			goto ret;
++		pr_info("MDTRACE event=checkpoint progress=%llu safe=%llu intr=%d\n",
++			(unsigned long long)conf->reshape_progress,
++			(unsigned long long)conf->reshape_safe,
++			test_bit(MD_RECOVERY_INTR, &mddev->recovery));
+ 		mddev->reshape_position = conf->reshape_progress;
+ 		mddev->curr_resync_completed = sector_nr;
+ 		if (!mddev->reshape_backwards)

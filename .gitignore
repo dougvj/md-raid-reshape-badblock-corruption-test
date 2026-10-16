@@ -1,3 +1,5 @@
 baseline-path.txt
 __pycache__/
 *.pyc
+
+trace-cache-path.txt

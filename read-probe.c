@@ -41,6 +41,13 @@ int main(int argc,char **argv){
     for(size_t j=0;j<n;j++){
      ssize_t one=rc==(ssize_t)(n*512)?512:pread(fd,buf+j*512,512,(s+j)*512);
      state[s+j]=one!=512?2:memcmp(buf+j*512,expected+j*512,512)?3:1;
+     if(state[s+j]==3){
+      char line[1200];
+      int used=snprintf(line,sizeof(line),"SECTOR_BYTES logical=%zu hex=",s+j);
+      for(int k=0;k<512;k++)used+=snprintf(line+used,sizeof(line)-used,"%02x",buf[j*512+k]);
+      line[used++]='\n';
+      if(write(STDOUT_FILENO,line,used)!=used)_exit(8);
+     }
     }
    }
    _exit(0);
